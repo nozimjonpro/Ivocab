@@ -1,0 +1,146 @@
+.level {
+  position: relative;
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+
+  &--active{
+      margin-top: 70px;
+  }
+}
+
+.level__table {
+  width: 100%;
+  padding: 18px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.level__top {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  width: max-content;
+  margin-left: auto;
+  margin-bottom: 15px;
+}
+
+
+
+.level__top-span {
+  margin-right: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #141272;
+}
+
+.level__top-select {
+  padding: 7px;
+  padding-right: 0;
+  padding-left: 20px;
+  margin-right: 20px;
+  font-size: 16px;
+  line-height: 21px;
+  color: #141272;
+  outline: none;
+  border: 1px solid #6a56e4;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.level__top-btn {
+  width: 155px;
+  text-align: center;
+  padding: 7px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #1bcfe7;
+  background: #6a56e4;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.level__table-row {
+  display: flex;
+  border-bottom: 1px solid black;
+  border-color: #141272;
+}
+
+.level__table-heading {
+  width: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #141272;
+  margin-bottom: 7px;
+}
+
+.level__table-data {
+  width: 20px;
+  margin: 5px 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #141272;
+}
+
+.level__table-heading:first-child,
+.level__table-data:first-child {
+  margin-right: 20px;
+  margin-left: 5px;
+}
+
+.level__table-heading:nth-child(2),
+.level__table-data:nth-child(2) {
+  width: 170px;
+  text-align: left;
+}
+
+.level__table-heading:nth-child(3),
+.level__table-data:nth-child(3) {
+  width: 140px;
+  margin-right: 40px;
+  text-align: center;
+}
+
+.level__table-heading:nth-child(4),
+.level__table-data:nth-child(4) {
+  width: 50px;
+  margin-right: 40px;
+
+  text-align: center;
+}
+
+.level__table-heading:nth-child(5),
+.level__table-data:nth-child(5) {
+  width: 130px;
+  text-align: center;
+}
+
+.level__table-heading:last-child,
+.level__table-data:last-child {
+  width: 50px;
+  margin-left: auto;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.level__table-buttons {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.table__edit-btn,
+.table__delete-btn {
+  border: none;
+  background-color: transparent;
+}
+
+.modal__label{
+    display: block;
+}

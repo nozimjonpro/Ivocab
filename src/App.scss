@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./Assets/Fonts/poppins-v19-latin-regular.eot'); 
+    src: url('./Assets/Fonts/poppins-v19-latin-regular.eot?#iefix') format('embedded-opentype'), 
+         url('./Assets/Fonts/poppins-v19-latin-regular.woff2') format('woff2'), 
+         url('./Assets/Fonts/poppins-v19-latin-regular.woff') format('woff'), 
+         url('./Assets/Fonts/poppins-v19-latin-regular.ttf') format('truetype'), 
+         url('./Assets/Fonts/poppins-v19-latin-regular.svg#Poppins') format('svg'); 
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./Assets/Fonts/poppins-v19-latin-500.eot'); 
+    src: url('./Assets/Fonts/poppins-v19-latin-500.eot?#iefix') format('embedded-opentype'), 
+         url('./Assets/Fonts/poppins-v19-latin-500.woff2') format('woff2'), 
+         url('./Assets/Fonts/poppins-v19-latin-500.woff') format('woff'), 
+         url('./Assets/Fonts/poppins-v19-latin-500.ttf') format('truetype'), 
+         url('./Assets/Fonts/poppins-v19-latin-500.svg#Poppins') format('svg'); 
+  }
+
+html{
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: '#Poppins', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #eeeeee;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+  }
+
+img{
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+main{
+    flex-grow: 1;
+}
+
+.container{
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: 50px;
+}
+
+.middle{
+    display: flex;
+}
