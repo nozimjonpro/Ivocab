@@ -4,9 +4,11 @@ import Edit from "../Assets/Img/edit.svg";
 import Delete from "../Assets/Img/delete.svg";
 import Modal from "../Components/Modal/Modal";
 
-function Level({isNavOpen}) {
+function Level({ isNavOpen }) {
   const [level, setLevel] = React.useState([]);
   const [isOpen, setIsOpen] = React.useState(false);
+  const [del, setDel] = React.useState("");
+  const [delModal, setDelModal] = React.useState(false);
 
   let numId = 1;
   React.useEffect(() => {
@@ -15,7 +17,6 @@ function Level({isNavOpen}) {
       .then((data) => {
         const levelArr = data.data.levels;
 
-       
         if (levelArr?.length > 0) {
           setLevel(levelArr);
         }
@@ -26,9 +27,15 @@ function Level({isNavOpen}) {
     setIsOpen(true);
   };
 
+  const handleDelete = (evt) => {
+    const levelId = evt.target.dataset.levelId;
+    setDel(levelId);
+    setDelModal(true);
+  };
+
   return (
-    <main className={`level ${isNavOpen? 'level--active' : ''}`}>
-      <div className='level__top'>
+    <main className={`level ${isNavOpen ? "level--active" : ""}`}>
+      <div className="level__top">
         <span className="level__top-span">Limit:</span>
         <select className="level__top-select">
           <option hidden>{level.length}</option>
@@ -66,10 +73,16 @@ function Level({isNavOpen}) {
                 <td className="level__table-data">
                   <div className="level__table-buttons">
                     <button className="table__edit-btn">
-                      <img src={Edit} alt="icon" />
+                      <img className="table-edit" src={Edit} alt="icon" />
                     </button>
                     <button className="table__delete-btn">
-                      <img src={Delete} alt="icon" />
+                      <img
+                        className="table-delete"
+                        src={Delete}
+                        alt="icon"
+                        onClick={handleDelete}
+                        data-level-id={item._id}
+                      />
                     </button>
                   </div>
                 </td>
@@ -78,7 +91,20 @@ function Level({isNavOpen}) {
         </tbody>
       </table>
 
-      <Modal setIsOpen = {setIsOpen} isOpen = {isOpen} level = {level}></Modal>
+      <div className="pagination">
+        <span className="pagination__span">1 of 1</span>
+        <button className="pagination-prev">&#x3c;</button>
+        <button className="pagination-next">&#x3e;</button>
+      </div>
+      <Modal
+        setDelModal={setDelModal}
+        setIsOpen={setIsOpen}
+        delModal={delModal}
+        isOpen={isOpen}
+        level={level}
+        del={del}
+        setLevel={setLevel}
+      ></Modal>
     </main>
   );
 }

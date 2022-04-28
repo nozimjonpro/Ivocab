@@ -5,8 +5,8 @@
   margin: 0 auto;
   margin-top: 20px;
 
-  &--active{
-      margin-top: 70px;
+  &--active {
+    margin-top: 70px;
   }
 }
 
@@ -25,8 +25,6 @@
   margin-left: auto;
   margin-bottom: 15px;
 }
-
-
 
 .level__top-span {
   margin-right: 10px;
@@ -141,6 +139,34 @@
   background-color: transparent;
 }
 
-.modal__label{
-    display: block;
+.modal__label {
+  display: block;
+}
+
+.pagination {
+  width: max-content;
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+.pagination__span {
+  margin-right: 10px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #141272;
+}
+
+.pagination-prev,
+.pagination-next{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: #141272;
+    border-radius: 50%;
+    background: #5743CD;
+    border: none;
+}
+
+.pagination-prev{
+    margin-right: 10px;
 }
